@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+This reporsitory is to document my projects in Azure while learning.
 
 [Link to another page](./another-page.html).
 
