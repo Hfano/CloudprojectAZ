@@ -43,11 +43,13 @@ end
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
 
-##### Header 5
+##### Investigating Security Events using Microsoft Sentinel
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+1. Use Data Connector to collect Windows VM Security Events
+2. Create Analytics Rule to detect and create incidents based on Security Events
+3. Investigate incidents in Microsoft Sentinel.
+
+
 
 ###### Header 6
 
