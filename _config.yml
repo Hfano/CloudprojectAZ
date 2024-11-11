@@ -1,5 +1,5 @@
 title: Azure projects
 description: Documentation of my projects
-show_downloads: true
+show_downloads: False
 google_analytics:
 theme: jekyll-theme-modernist
