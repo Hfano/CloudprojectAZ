@@ -1,6 +1,9 @@
 Task 1: Create and configure user accounts.
 Task 2: Create groups and add members.
 
+## Architecture diagram
+
+![Diagram of the lab 01 architecture.](../media/az104-lab01-architecture.png)
 
 Task 1A:
 Azure portal -> Microsoft Entra ID-> Manage-> Users -> Create new user wit the following values:
