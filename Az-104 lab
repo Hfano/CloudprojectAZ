@@ -2,6 +2,7 @@ Task 1: Create and configure user accounts.
 Task 2: Create groups and add members.
 
 
+Task 1A:
 Azure portal -> Microsoft Entra ID-> Manage-> Users -> Create new user wit the following values:
 Setting	Value
 User principal name	az104-user1
@@ -10,6 +11,20 @@ Auto-generate password	checked
 Account enabled	checked
 Job title (Properties tab)	IT Lab Administrator
 Department (Properties tab)	IT
+Usage location (Properties tab)	United States
+
+
+
+Task 1B:
+Microsoft Entra ID -> Manage -> Users -> New user -> Invite new user
+Include: 
+Email	your email address
+Display name	your name
+Send invite message	check the box
+Message	Welcome to Azure and our group project
+Properties information: 
+Job title	IT Lab Administrator
+Department	IT
 Usage location (Properties tab)	United States
 
 
