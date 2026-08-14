@@ -1,1 +1,67 @@
 
+Task 1: Implement management groups.
+Task 2: Review and assign a built-in Azure role.
+Task 3: Create a custom RBAC role.
+Task 4: Monitor role assignments with the Activity Log.
+
+
+Task 1
+Azure portal ->Microsoft Entra ID ->Manage ->Management groups-> Create a management group with the following settings
+---
+    | Setting | Value |
+    | --- | --- |
+    | Management group ID | `az104-mg1` (must be unique in the directory) |
+    | Management group display name | `az104-mg1` |
+
+
+Task2
+
+1. Select the **az104-mg1** management group.
+2. Select Access control (IAM)-> Roles.
+3. click  Add  ->  Add role assignment 
+4.  ADD Virtual Machine Contributor
+5. Click  Members  -> Select Members
+6.  select the `helpdesk` group
+7. On the **Conditions** tab 
+8. On the **Assignment type** tab, leave the assignment type as **Eligible** and the time-bound settings at their defaults, then click **Next**.
+9. Continue on the **Access control (IAM)** blade. On the **Role assignments** tab, confirm the **helpdesk** group has the **Virtual Machine Contributor** role. 
+
+
+
+## Task 3: Create a custom RBAC role
+1. Roles and admin -> Add-> Add custom role 
+2. On the Basics tab complete the configuration.
+
+    | Setting | Value |
+    | --- | --- |
+    | Custom role name | `Custom Support Request` |
+    | Description | `A custom contributor role for support requests.` |
+
+3. For **Baseline permissions**, select **Clone a role**. In the **Role to clone** drop-down menu, select **Support Request Contributor**.
+
+4. Select **Next** to move to the **Permissions** tab, and then select **+ Exclude permissions**.
+
+5. In the resource provider search field, enter `.Support` and select **Microsoft.Support**.
+
+6. In the list of permissions, place a checkbox next to **Other: Registers Support Resource Provider** and then select **Add**. The role should be updated to include this permission as a *NotAction*.
+
+7. On the **Assignable scopes** tab, ensure your management group is listed, then click **Next**.
+
+8. Review the JSON for the *Actions*, *NotActions*, and *AssignableScopes* that are customized in the role. 
+
+9. **Create**.
+
+  
+
+## Task 4: Monitor role assignments with the Activity Log
+
+1. In the portal locate the **az104-mg1** resource and select **Activity log**. The activity log provides insight into subscription-level events. 
+2. Review the activities for role assignments. The activity log can be filtered for specific operations. 
+
+  
+
+
+
+
+
+
