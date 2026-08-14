@@ -1,1 +1,41 @@
 
+Task 1: Create and assign tags via the Azure portal.
+Task 2: Enforce tagging via an Azure Policy.
+Task 3: Apply tagging via an Azure Policy.
+Task 4: Configure and test resource locks.
+-----------------------------------------------------------------------------------------
+
+Task 1: Assign tags via the Azure portal
+1. Azure portal-> Resource groups -> Create with the following 
+ | Setting | Value |
+    | --- | --- |
+    | Subscription name | your subscription |
+    | Resource group name | `az104-rg2` |
+    | Region | **East US** |
+2. Add tags 
+| Setting | Value |
+    | --- | --- |
+    | Name | Cost Center |
+    | Value | 000 |
+3. Create
+--------------------------------------------------------------------------------------
+Task 2: Enforce tagging via an Azure Policy
+1. Azure portal -> Policy 
+2. Specify the  Scope
+ Setting | Value |
+    | --- | --- |
+    | Subscription | *your subscription* |
+    | Resource Group | **az104-rg2** |
+ 3.Policy basics 
+| Setting | Value |
+    | --- | --- |
+    | Assignment name | `Require Cost Center tag and its value on resources` |
+    | Description | `Require Cost Center tag and its value on all resources in the resource group`|
+    | Policy enforcement | Enabled |
+4. Parameters to the following values:
+    | Setting | Value |
+    | --- | --- |
+    | Tag Name | `Cost Center` |
+    | Tag Value | `000` |
+
+
