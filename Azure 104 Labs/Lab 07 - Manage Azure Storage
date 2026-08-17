@@ -36,7 +36,55 @@ Setting | Value |
 3. Save
 ------------------------------------------------------------------------------------------------------
 Manage blob uploads
-1.
+1.Storage account-> settings-> configuration-> Enable Allow storage account key access-> Save
+2.Access Control (IAM) -> Add role assignment-> Storage Blob Data Contributor role->Assign 
+3. Assign the Storage File Data Privileged Contributor role
+4.Upload data to the storage container.
+5. Upload blob -> Advanced
+ | Setting | Value |
+    | --- | --- |
+    | Browse for files | add the file you have selected to upload |
+    | Select **Advanced** | |
+    | Blob type | **Block blob** |
+    | Block size | **4 MiB** |
+    | Access tier | **Hot**  (notice the other options) |
+    | Upload to folder | `securitytest` |
+    | Encryption scope | Use existing default container scope |
+6.Upload 
+7.Confrim the file was upload and the folder was created.
+8.Download the uploaded file 
+9.Copy and paste the uploaded file url 
+10. Results: publicAccessNotPermitted and Public access is not permitted on this storage account
+---------------------------------------------------------------------------------------------------
+Configure limited access to the blob storage
+1. Go to the uploaded and select (…) ->Generate SAS. Results: Url displayed the image 
+2.Generate a user generated key with  
+| Setting | Value |
+    | --- | --- |
+    | Signing method | **User delegation key** |
+    | Permissions | **Read** (notice your other choices) |
+    | Start date | yesterday's date |
+    | Start time | current time |
+    | Expiry date | tomorrow's date |
+    | Expiry time | current time |
+    | Allowed IP addresses | leave blank |
+3. Generate SAS token and URL. 
+4. Go to the url. Results: url displayed the upload it image
+----------------------------------------------------------------------------------------------
 
+Task 3: Create and configure an Azure File storage
+1. Azure portal-> Storage accounts-> select storage account -> Data storage-> Classic file share 
+2. Create a classic file share named "shared1"
+3. Review + create
+4. Disregard enable backup.
+-------------------------------------------------------------------------------------------------------
+Explore Storage Browser and upload a file
+1. Verify the created file share named "shared1" was created in tyhe storage account
+2. Select shared1 ->> Add directory->> Allows you create a folder structure.
+3.Browse-> upload a file the the created folder.
+--------------------------------------------------------------------------------------------------
+ Restrict network access to the storage account
+1. Azure portal->> Network foundation->> create a virtual network named "vnet1" ->> Take the defaults for other parameter ->> Create
+2.
 
 
