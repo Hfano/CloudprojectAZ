@@ -85,6 +85,14 @@ Explore Storage Browser and upload a file
 --------------------------------------------------------------------------------------------------
  Restrict network access to the storage account
 1. Azure portal->> Network foundation->> create a virtual network named "vnet1" ->> Take the defaults for other parameter ->> Create
-2.
+2. Go to the created Vnet1 -> Settings-> Service endpoints-> Add 
+    + In the **Service** drop-down select **Microsoft.Storage**.
+    + Leave the **Service endpoint policies** dropdown at its default of **0 selected**.
+    + In the **Subnets** drop-down check the **Default** subnet.
+    + Click **Add** to save your changes.  
+3. Return to the storage account->Security + networking-> Networking-> Public network access-> Manage-> Add a virtual network -> Add existing network
+4. Select the created "vnet1" with the default subnet -> add
+5.In the IPv4 Addresses section -> Delete  your machine IP address -> Save 
+
 
 
