@@ -5,4 +5,24 @@ Task 4: Scale Azure Virtual Machine Scale Sets.
 Task 5: Create a virtual machine using Azure PowerShell (optional 1).
 Task 6: Create a virtual machine using the CLI (optional 2).
 
-1. Azure portal-> Virtual machines
+1. Azure portal-> Virtual machines-> Create with the following 
+ | Setting | Value |
+    | --- | --- |
+    | Subscription | the name of your Azure subscription |
+    | Resource group |  **az104-rg8** (If necessary, click **Create new**) |
+    | Virtual machine names | `az104-vm1` and `az104-vm2` (After selecting both availability zones, select **Edit names** under the VM name field.) |
+    | Region | **East US** |
+    | Availability options | **Availability zone** |
+    | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets) |
+    | Self-selected zone | (take the default) |
+    | Azure-selected zone (Preview) | disabled |
+    | Security type | **Standard** |
+    | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** |
+    | Azure Spot instance | **unchecked** |
+    | Size | **Standard D2s v3** |
+    | Username | `localadmin` |
+    | Password | **Provide a secure password** |
+    | Public inbound ports | **None** |
+    | Would you like to use an existing Windows Server license? | **Unchecked** |
+
+
