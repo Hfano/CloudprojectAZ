@@ -21,4 +21,24 @@ Task 1: Create an Azure Resource Manager template
 ----------------------------------------------------------------------------------
 
 Task 2: Edit an Azure Resource Manager template and then redeploy the template
-1.
+1.Azure portal-> Search Deploy a custom template-> Custom deployment-> Quickstart template.
+2. Build your own template in the editor -> Edit template-> Load file->  upload template.json that was downloaded.
+3. Makes changes 
+    + Change **disks_az104_disk1_name** to `disk_name` (two places to change)
+    + Change **az104-disk1** to `az104-disk2` (one place to change)
+4. Save
+5. deployment settings:
+
+    | Setting | Value |
+    | --- |--- |
+    | Subscription | *your subscription* |
+    | Resource Group | `az104-rg3` |
+    | Region | **(US) East US** |
+    | Disk_name | `az104-disk2` |
+6.Go to resource-> Verify az104-disk2 was created 
+7.Verify Resource group az104-rg3 have two disks.
+8.. Verify the template is in each disk 
+---------------------------------------------------------------------------------------------
+
+Task 3: Configure the Cloud Shell and deploy a template with PowerShell 
+
