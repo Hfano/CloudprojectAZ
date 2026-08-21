@@ -41,4 +41,11 @@ Task 2: Edit an Azure Resource Manager template and then redeploy the template
 ---------------------------------------------------------------------------------------------
 
 Task 3: Configure the Cloud Shell and deploy a template with PowerShell 
+1.Azure Portal-> Cloudshell -> Manage files ->Upload the downloaed file -> Click on editor 
+2.Change the disk name to az104-disk3 -> Use Ctrl+S to save your changes, then Ctrl+Q to close the editor. 
+3.If you have multiple subscriptions, first ensure PowerShell is using the correct subscription context. Run the following commands and, if needed, replace `<your-subscription-id>` with the subscription that contains **az104-rg3**.
 
+    ```powershell
+    Get-AzContext
+    Set-AzContext -Subscription <your-subscription-id>
+    ```
