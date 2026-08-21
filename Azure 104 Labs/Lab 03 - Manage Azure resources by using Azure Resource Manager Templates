@@ -3,4 +3,22 @@ Task 2: Edit an Azure Resource Manager template and redeploy the template.
 Task 3: Configure the Cloud Shell and deploy a template with Azure PowerShell.
 Task 4: Deploy a template with the CLI.
 Task 5: Deploy a resource by using Azure Bicep
+-----------------------------------------------------------------------
 
+Task 1: Create an Azure Resource Manager template
+1. Azure portal -> Disk -> Storage Center | Azure Disks -> Create using : 
+     Setting | Value |
+    | --- | --- |
+    | Subscription | *your subscription* | 
+    | Resource Group | `az104-rg3` (If necessary, select **Create new**.)
+    | Disk name | `az104-disk1` | 
+    | Region | **East US** |
+    | Availability zone | **No infrastructure redundancy required** | 
+    | Source type | **None** |
+    | Performance | **Standard HDD** (change size) |
+    | Size | **32 Gib** | 
+2. Go to resource -> Automation -> Export template
+----------------------------------------------------------------------------------
+
+Task 2: Edit an Azure Resource Manager template and then redeploy the template
+1.
