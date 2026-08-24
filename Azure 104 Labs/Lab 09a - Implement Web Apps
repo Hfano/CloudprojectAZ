@@ -1,0 +1,21 @@
+Task 1: Create and configure an Azure web app.
+Task 2: Create and configure a deployment slot.
+Task 3: Configure web app deployment settings.
+Task 4: Swap deployment slots.
+Task 5: Configure and test autoscaling of the Azure web app.
+---------------------------------------------------------------
+
+Task 1: Create and configure an Azure web app
+1. Azure portal -> App Services->  Create -> Web App 
+ | Setting | Value |
+    | --- | ---|
+    | Subscription | your Azure subscription |
+    | Resource group | `az104-rg9` (If necessary, select **Create new**) |
+    | Web app name | any globally unique name |
+    | Publish | **Code** |
+    | Runtime stack | **PHP 8.2** |
+    | Operating system | **Linux** |
+    | Region | **East US** |
+    | Pricing plans | **Premium V3 P1V3** |
+    | Zone redundancy | accept the defaults |
+2. 
