@@ -1,1 +1,14 @@
 
+Task 1: Create a virtual network with subnets using the portal.
+Task 2: Create a virtual network and subnets using a template.
+Task 3: Create and configure communication between an Application Security Group and a Network Security Group.
+Task 4: Configure public and private Azure DNS zones.
+
+
+Task 1: Create a virtual network with subnets using the portal
+1. Azure portal -> Virtual Networks-> Create with 
+|  **Option**         | **Value**            |
+	| ------------------ | -------------------- |
+	| Resource Group     | `az104-rg4` (if necessary, create new) |
+	| Name               | `CoreServicesVnet`     |
+	| Region             | (US) **East US**         |
