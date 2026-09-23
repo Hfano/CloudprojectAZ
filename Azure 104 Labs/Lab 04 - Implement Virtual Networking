@@ -12,3 +12,20 @@ Task 1: Create a virtual network with subnets using the portal
 	| Resource Group     | `az104-rg4` (if necessary, create new) |
 	| Name               | `CoreServicesVnet`     |
 	| Region             | (US) **East US**         |
+2. Move to the **Address space** tab.
+
+	|  **Option**         | **Value**            |
+	| ------------------ | -------------------- |
+	| IPv4 address space | Replace the prepopulated IPv4 address space with `10.20.0.0/16` 
+3.1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
+
+	>**Note:** Be sure to delete the default subnet - either before or after creating the other subnets.
+
+	| **Subnet**             | **Option**           | **Value**              |
+	| ---------------------- | -------------------- | ---------------------- |
+	| SharedServicesSubnet   | Name          | `SharedServicesSubnet`   |
+	|                        | Starting address		| `10.20.10.0`          |
+	|						 | Size					| `/24`	|
+	| DatabaseSubnet         | Name          | `DatabaseSubnet`         |
+	|                        | Starting address		| `10.20.20.0`        |
+	|						 | Size					| `/24`	|
