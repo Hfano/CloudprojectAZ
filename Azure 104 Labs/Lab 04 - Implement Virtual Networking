@@ -4,7 +4,7 @@ Task 2: Create a virtual network and subnets using a template.
 Task 3: Create and configure communication between an Application Security Group and a Network Security Group.
 Task 4: Configure public and private Azure DNS zones.
 
-
+-----------------------------------------------------------------------------------------------
 Task 1: Create a virtual network with subnets using the portal
 1. Azure portal -> Virtual Networks-> Create with 
 |  **Option**         | **Value**            |
@@ -17,7 +17,7 @@ Task 1: Create a virtual network with subnets using the portal
 	|  **Option**         | **Value**            |
 	| ------------------ | -------------------- |
 	| IPv4 address space | Replace the prepopulated IPv4 address space with `10.20.0.0/16` 
-3.1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
+3. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
 
 	>**Note:** Be sure to delete the default subnet - either before or after creating the other subnets.
 
@@ -29,3 +29,20 @@ Task 1: Create a virtual network with subnets using the portal
 	| DatabaseSubnet         | Name          | `DatabaseSubnet`         |
 	|                        | Starting address		| `10.20.20.0`        |
 	|						 | Size					| `/24`	|
+4. In the Automation-> select Export template and Parameters.
+-----------------------------------------------------------------------------------------------
+
+Task 2: Create a virtual network and subnets using a template
+1.Open the downloaded template.json file -> edit using vscode 
+2 Makes some changes to all occurrences of CoreServicesVnet to `ManufacturingVnet`. 
+3. Replace all occurrences of **10.20.0.0** with `10.30.0.0`. 
+4. Change all occurrences of **DatabaseSubnet** to `SensorSubnet2`.
+5. Change all occurrences of **10.20.20.0/24** to `10.30.21.0/24`.
+
+Make changes to the parameters file
+1.Open parameters.json and change CoreServicesVnet to `ManufacturingVnet`.
+2.Save
+
+Deploy the custom template
+1.Azure portal-> Deploy a custom template -> Build your own template in the editor-> Load file->
+
